@@ -26,7 +26,7 @@ jobs:
     - name: Pack2
       run: dotnet pack
     - name: Print
-      run: ls -lah
+      run: ls -lahR
     
       
     - uses: actions/checkout@v2
