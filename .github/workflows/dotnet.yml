@@ -23,7 +23,13 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      
     - name: Upload a Build Artifact
+    - uses: actions/checkout@v2
+
+    - run: mkdir -p path/to/artifact
+
+    - run: echo hello > path/to/artifact/world.txt
       uses: actions/upload-artifact@v2.3.1
       with:
     # Artifact name
