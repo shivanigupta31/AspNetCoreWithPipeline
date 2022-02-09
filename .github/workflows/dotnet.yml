@@ -28,24 +28,12 @@ jobs:
     - name: Print
       run: ls -lahR
     
-      
+    
     - uses: actions/checkout@v2
-
-    - run: mkdir -p path/to/artifact
-
-    - run: echo hello > path/to/artifact/world.txt
 
     - uses: actions/upload-artifact@v2
       with:
         name: my-artifact
-        path: path/to/artifact/world.txt
+        path: AspNetCoreWithPipeline/bin/Debug/AspNetCoreWithPipeline.1.0.0.nupkg
  
-    - uses: actions/checkout@v2
-
-    - uses: actions/download-artifact@v2
-      with:
-       name: my-artifact
-    
-    - name: Display structure of downloaded files
-      run: ls -R
    
