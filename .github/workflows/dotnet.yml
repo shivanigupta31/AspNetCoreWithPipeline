@@ -23,7 +23,7 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: Pack
+    - name: Pack1
       run: dotnet pack
     - name: Print
       run: ls -lah
